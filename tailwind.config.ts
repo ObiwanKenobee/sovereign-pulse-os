@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// DDS-OS Custom Colors
+				sovereign: {
+					black: '#0D0D0D',
+					gold: '#D4AF37',
+					obsidian: '#222222',
+					dark: '#161616',
+					purple: '#32275F',
+					muted: '#2A2A2A'
 				}
 			},
 			borderRadius: {
@@ -70,25 +80,45 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				'pulse-gold': {
+					'0%, 100%': { boxShadow: '0 0 0 0 rgba(212, 175, 55, 0.4)' },
+					'50%': { boxShadow: '0 0 0 10px rgba(212, 175, 55, 0)' }
+				},
+				'glow': {
+					'0%, 100%': { opacity: '0.8' },
+					'50%': { opacity: '1' }
+				},
+				'rotate-slow': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gold': 'pulse-gold 2s infinite',
+				'glow': 'glow 3s ease-in-out infinite',
+				'rotate-slow': 'rotate-slow 20s linear infinite',
+				'float': 'float 6s ease-in-out infinite',
+			},
+			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'neue-haas': ['Neue Haas Grotesk', 'sans-serif']
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'glass-grain': "url('/images/noise.png')"
 			}
 		}
 	},
